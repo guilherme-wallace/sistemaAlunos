@@ -1,0 +1,114 @@
+----------------------------- Sistemas de Alunos ------------------------------------------------
+0 - SAIR DA APLICAÇÃO
+1 - INSERIR UM REGISTRO NO VETOR
+2 - ...
+3 - ...
+4 - ...
+5 - ---
+6 - ---
+7 - ---
+8 - ---
+9 - ---
+10 - ---
+11 - ---
+12 - ---
+13 - SOBRE 
+
+DIGITE A OPÇÃO DESEJADA : 
+------------------------------------------------------------------------------------------------
+
+1º Matricular aluno na instituição
+Alunos -> Aluno (Nome, Matrícula)
+1.5º Lista de todos os alunos
+
+2º Inserir aluno na turma
+3º Inserir vários alunos na turma
+turma[50] -> AlunosMatriculados
+
+4º Imprimir os dados de um aluno (buscar pela matrícula informada)
+
+5º Imprimir a relação de alunos (matricula, nome e situação)
+
+6º Registrar nota1 de um aluno (buscar pela matrícula informada)
+
+7º Registrar nota1 para todos os alunos. (percorre o vetor, exibe a matricula e o nome para que o 
+professor insira a nota1)
+
+8º Recalcula a média
+
+9º Imprimir todos os alunos aprovados (Apenas depois da 2 nota)
+
+10º Imprimir todos os alunos reprovados (Apenas depois da 2 nota)
+
+11º Imprimir todos os alunos cursando
+
+12º Imprimir todos os alunos em espera
+
+------------------------------------------------------------------------------------------------
+
+ESPECIFICAÇÃO DO SISTEMA 1 - ALUNOS
+Defina uma estrutura de registros para cadastro de alunos de uma turma de no máximo 50 alunos. 
+Cada registro de alunos deverá conter: Matrícula, Nome, Nota1, Nota2, Média, Situação.
+A situação pode ser um inteiro que corresponde as seguintes situações: 
+0-cursando, 1-aprovado, 2-reprovado.
+
+A Matricula por si só, devera ser um registro contendo uma estrutura composta por um inteiro 
+representando o semestre + um string representando 
+o curso + um inteiro representando a numeração. Exemplo 20251CECA0001
+(para formatar os 4 dígitos que representam o número no final use (%04d).
+
+Na inserção de um aluno deverá ser informado:
+Matrícula e Nome, neste momento  a Nota1, Nota2 e Média serão sempre definidos como 0 até que o 
+professor registre a nota. 
+A Situação iniciará com um status "0-cursando". A média e situação só serão alteradas quando o
+professor inserir a nota2, neste caso a média é calculada e 
+se for menor que 6,0 a situação será 2-reprovado do contrário sera 1-aprovado.
+
+Defina funções para:
+
+inserir aluno na turma
+Inserir um Aluno no Vetor (a função deverá requisitar internamente a matrícula e o nome). 
+obs. se o vetor estiver cheio ("capacidade da turma") deve-se informar que não é 
+possível mais inserir alunos devido ao limite de capacidade da turma)
+
+Inserir Vários Alunos no vetor (A função 1 é repetida em loop até que se deseje parar ou até que
+o vetor fique cheio "capacidade da turma")
+
+
+Imprimir os dados de um aluno (buscar pela matrícula informada)
+
+Imprimir a relação de alunos (matricula, nome e situação)
+
+Registrar nota1 de um aluno (buscar pela matrícula informada). Obs. Caso a situação dele esteja 
+diferente de "Cursando", o programa deve recalcular a média, bem como, 
+poderá ocorrer uma mudança da situação do aluno - nestas situações deve ser sempre ser exibida 
+situação do aluno.
+
+Registrar nota1 para todos os alunos. (percorre o vetor, exibe a matricula e o nome para que o 
+professor insira a nota1)
+
+Registrar nota2 de um aluno (buscar pela matrícula informada). obs: Sempre que a nota2 for 
+informada o programa deverá calcular a média do aluno e registrar a situação, 
+exibindo na mesma função esta informação (média e situação) ;
+
+Registrar nota 2 de todos os alunos. (percorre o vetor, exibe a matricula e o nome e a 
+nota 1 para que o professor insira a nota2)
+
+Recalcula a média (percorre o vetor recalculando a média e se tiver atualização ajustar a situação de acordo). Se tiver atualização exibir (Matricula, Nota1, Nota2, 
+Média e Situação) somente do que foi atualizado , e no final imprimir "recalculo finalizado"
+imprimir a média e situação de um aluno (buscar pela matrícula informada)  exibir matrícula, nome, nota1, nota 2, média e situação.
+Imprimir as médias e situação e todos os alunos: matricula, nome, média e situação (caso a situação seja diferente de cursando (a média não deve ser exibida)
+
+Imprimir todos os alunos aprovados (matricula, nome e média)
+
+Imprimir todos os alunos reprovados (matrícula e nome e média)
+*/
+------------------------------------------------------------------------------------------------
+
+
+
+Ian - O que cada um vai fazer?
+
+Gustavo - querem separar uma parte do codigo pra cada um focar em fazer?
+
+Gui - Bora separar por funções, cada um faz alguma ou um conjunto de funções
