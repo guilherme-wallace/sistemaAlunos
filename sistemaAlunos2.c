@@ -69,20 +69,18 @@ void inserirUmAluno() {
 
     printf("\n--- ADICIONAR ALUNO ---\n");
     
-    // Cria a matrícula juntando o semestre, curso e um número sequencial
     snprintf(turma[totalAlunos].matricula, sizeof(turma[totalAlunos].matricula),
              "%d%s%04d", SEMESTRE_PADRAO, CURSO_PADRAO, proximoNumeroMatricula);
     
     printf("A matricula criada para este aluno e: %s\n", turma[totalAlunos].matricula);
     
     printf("Digite o nome do aluno: ");
-    getchar(); 
-    scanf("%[^\n]", turma[totalAlunos].nome); 
-
+    scanf(" %[^\n]", turma[totalAlunos].nome);  
+    
     turma[totalAlunos].nota1 = 0.0;
     turma[totalAlunos].nota2 = 0.0;
     turma[totalAlunos].media = 0.0;
-    turma[totalAlunos].situacao = 0; // 0 - Cursando
+    turma[totalAlunos].situacao = 0;// 0 - Cursando
 
     printf("Aluno \"%s\" adicionado com sucesso!\n", turma[totalAlunos].nome);
     totalAlunos++;
@@ -115,7 +113,6 @@ void imprimirDadosAluno() {
 
     int encontrado = 0;
     for (int i = 0; i < totalAlunos; i++) {
-        // O strcmp compara strings, está sendo comparado a matrícula informada com as matrículas dos alunos
         if (strcmp(turma[i].matricula, buscaMatricula) == 0) {
             printf("\n--- DADOS DO ALUNO ENCONTRADO ---\n");
             printf("Matricula: %s\n", turma[i].matricula);
@@ -141,8 +138,7 @@ void imprimirRelacaoAlunos() {
         return;
     }
     for (int i = 0; i < totalAlunos; i++) {
-        printf("Matricula: %s, Nome: %s, Situacao: ",
-               turma[i].matricula, turma[i].nome);
+        printf("Matricula: %s, Nome: %s, Situacao: ", turma[i].matricula, turma[i].nome);
         exibirSituacao(turma[i].situacao);
     }
 }
@@ -295,8 +291,7 @@ void imprimirAlunosAprovados() {
     int encontrados = 0;
     for (int i = 0; i < totalAlunos; i++) {
         if (turma[i].situacao == 1) { 
-            printf("Matricula: %s, Nome: %s, Media: %.2f\n",
-                   turma[i].matricula, turma[i].nome, turma[i].media);
+            printf("Matricula: %s, Nome: %s, Media: %.2f\n", turma[i].matricula, turma[i].nome, turma[i].media);
             encontrados++;
         }
     }
@@ -314,8 +309,7 @@ void imprimirAlunosReprovados() {
     int encontrados = 0;
     for (int i = 0; i < totalAlunos; i++) {
         if (turma[i].situacao == 2) { 
-            printf("Matricula: %s, Nome: %s, Media: %.2f\n",
-                   turma[i].matricula, turma[i].nome, turma[i].media);
+            printf("Matricula: %s, Nome: %s, Media: %.2f\n", turma[i].matricula, turma[i].nome, turma[i].media);
             encontrados++;
         }
     }
